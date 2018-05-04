@@ -1,4 +1,4 @@
-package cs251lab10package;
+package aPackage;
 
 
 public class WaitingThread extends Thread {

@@ -1,4 +1,4 @@
-package cs251lab10package;
+package aPackage;
 
 import java.io.BufferedReader;
 import java.io.EOFException;
@@ -59,15 +59,15 @@ public class JChatComm {
         	
         }
         else{
-        	if (type.equalsIgnoreCase("Client")){
-        		System.out.println("Server: ");
+        	if (type.equalsIgnoreCase("Cliente")){
+        		System.out.println("Servidor: ");
         	}
         	else {
-        		System.out.println("Client: ");
+        		System.out.println("Cliente: ");
         	}
-        	System.out.println("Encrypted Message: "+temp.core.text);
+        	System.out.println("Mensaje encriptado: "+temp.core.text);
         	temp.core.text = myrsa.decrypt(temp.core.text);
-	        System.out.println("Decrypted Message: "+temp.core.text);
+	        System.out.println("Mensaje desencriptado: "+temp.core.text);
 	 
 	        
         }

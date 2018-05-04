@@ -1,4 +1,4 @@
-package cs251lab10package;
+package aPackage;
 import java.math.BigInteger;
 import java.security.SecureRandom;
     

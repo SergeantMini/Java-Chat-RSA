@@ -1,4 +1,4 @@
-package cs251lab10package;
+package aPackage;
 import java.io.EOFException;
 import java.io.IOException;
 import java.net.SocketException;
@@ -31,28 +31,28 @@ public class Receiver extends Thread {
                 else if (count==1){
                 	Modulus=received.core.text;
                 	chat.hisModulus = Modulus;
-                	if (!(prompt.equalsIgnoreCase("Client : "))){
-                		System.out.println("Connected to server: "+serverAdd+"\nStreams Established. Ready to chat ..");
+                	if (!(prompt.equalsIgnoreCase("Cliente: "))){
+                		System.out.println("Conectado al servidor "+serverAdd+"\nChat listo..");
                 	}
                 	else {
-                		System.out.println("Keys Exchanged!");
+                		System.out.println("Llaves intercambiadas exitosamente");
                 	}
                 }
                 else{
                 	           	
-                	System.out.println("<This message was sent at: "+received.timestamp+">");
-        	        System.out.println("[This message was received at:"+ new Timestamp((new Date()).getTime())+"]");
+                	System.out.println("<Enviado: "+received.timestamp+">");
+        	        System.out.println("[Recibido: "+ new Timestamp((new Date()).getTime())+"]");
 	            }
             count+=1;
             }
         } catch (SocketException e) {
-            if (prompt.equalsIgnoreCase("Client : ")){
-            	System.out.println("Session Ended with client!\nWaiitingfor a client to connect...");
+            if (prompt.equalsIgnoreCase("Cliente: ")){
+            	System.out.println("Sesión finalizada!\nEsperando a un cliente...");
             }
                       
         } catch (EOFException e) {
-        	if (prompt.equalsIgnoreCase("Client : ")){
-            	System.out.println("Session Ended with client!\nWaiitingfor a client to connect...");
+        	if (prompt.equalsIgnoreCase("Cliente: ")){
+            	System.out.println("Sesión finalizada!\nEsperando a un cliente...");
             }
         } catch (IOException e) {
             e.printStackTrace();

@@ -34,7 +34,7 @@ public class Sender extends Thread {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-			if (input.equalsIgnoreCase("End Chat")) {
+			if (input.equalsIgnoreCase("Chat finalizado")) {
 				chat.endChat();
 				return;
 			}

@@ -1,4 +1,4 @@
-package cs251lab10package;
+package aPackage;
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.Date;

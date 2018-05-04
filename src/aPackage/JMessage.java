@@ -1,4 +1,4 @@
-package cs251lab10package;
+package aPackage;
 import java.io.Serializable;
 
 public class JMessage implements Serializable {
